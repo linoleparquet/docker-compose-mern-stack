@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
 
-const BACKEND_HOST = "localhost:4000";
+const BACKEND_HOST = "http://localhost:4000";
 
 export default class CreateTodo extends Component {
   constructor(props) {
@@ -45,7 +45,7 @@ export default class CreateTodo extends Component {
     };
 
     axios
-      .post(`http://${BACKEND_HOST}/todos/add`, newTodo)
+      .post(`${BACKEND_HOST}/todos/add`, newTodo)
       .then((res) => console.log(res.data));
 
     this.setState({

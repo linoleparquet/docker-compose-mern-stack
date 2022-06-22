@@ -4,7 +4,7 @@ const cors = require("cors");
 const mongoose = require("mongoose");
 const todoRoutes = express.Router();
 const PORT = 4000;
-const MONGO_HOST = "localhost:27017";
+const MONGO_HOST = "mongodb:27017";
 
 //  Define Todo object structure
 let TodoStrucutre = new mongoose.Schema({

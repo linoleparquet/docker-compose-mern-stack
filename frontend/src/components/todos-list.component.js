@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 
-const BACKEND_HOST = "localhost:4000";
+const BACKEND_HOST = "http://localhost:4000";
 
 const Todo = (props) => (
   <tr>
@@ -42,7 +42,7 @@ export default class TodosList extends Component {
 
   componentDidUpdate() {
     axios
-      .get(`http://${BACKEND_HOST}/todos`)
+      .get(`${BACKEND_HOST}/todos`)
       .then((res) => {
         this.setState({
           todos: res.data,

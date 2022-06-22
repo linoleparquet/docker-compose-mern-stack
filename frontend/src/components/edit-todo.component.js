@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
 
-const BACKEND_HOST = "localhost:4000";
+const BACKEND_HOST = "http://localhost:4000";
 
 export default class EditTodo extends Component {
   constructor(props) {
@@ -16,7 +16,7 @@ export default class EditTodo extends Component {
 
   componentDidMount() {
     axios
-      .get(`http://${BACKEND_HOST}/todos/` + this.props.match.params.id)
+      .get(`${BACKEND_HOST}/todos/` + this.props.match.params.id)
       .then((res) => {
         this.setState({
           todo_description: res.data.todo_description,
