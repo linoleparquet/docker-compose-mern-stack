@@ -1,5 +1,10 @@
 version: "3.7"
 services:
+  frontend:
+    image: todo-frontend:v2
+    ports:
+      - 80:80
+
   backend:
     image: todo-backend:v2
     ports:

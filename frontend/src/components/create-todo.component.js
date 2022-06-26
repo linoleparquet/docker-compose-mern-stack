@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
 
-const BACKEND_HOST = "http://localhost:4000";
+const BACKEND_HOST = window["location"]["origin"] + "/api";
 
 export default class CreateTodo extends Component {
   constructor(props) {
